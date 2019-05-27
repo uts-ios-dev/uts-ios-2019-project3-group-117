@@ -70,6 +70,8 @@ class TaskListViewController: UIViewController {
         haveTableView.reloadData()
     }
 
+    // function for adding the to do stuff.
+    
     @objc func addToDo(){
         if segment.selectedSegmentIndex == 1{
             performSegue(withIdentifier: "add", sender: nil)
@@ -102,6 +104,9 @@ class TaskListViewController: UIViewController {
         }
         
     }
+    
+    // function for deleting the task.
+    
     @IBAction func changeValue(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 1{
             haveContainerView.isHidden = false
@@ -111,6 +116,8 @@ class TaskListViewController: UIViewController {
             wishTableView.isHidden = false
         }
     }
+    
+    // add date&time for the tasks.
     
     func generateDate()->[[Date]]{
         var date = Date()
@@ -137,6 +144,8 @@ extension TaskListViewController: UITableViewDelegate,UITableViewDataSource{
             return 7
         }
     }
+    
+    // use the dateTimePicker Kit to generate the date-pick table.
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if tableView == haveTableView{
