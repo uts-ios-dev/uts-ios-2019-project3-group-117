@@ -8,13 +8,15 @@ import UIKit
 
 extension UIColor {
     convenience init(hexString:String){
-        //处理数值
+        
+        //Deal with the values.
         var cString = hexString.uppercased().trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
         
         let length = (cString as NSString).length
-        //错误处理
+        
+        //Handle the mistakes.
         if (length < 6 || length > 7 || (!cString.hasPrefix("#") && length == 7)){
-            //返回whiteColor
+            //return white color.
             self.init(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)
             return
         }
@@ -23,7 +25,7 @@ extension UIColor {
             cString = (cString as NSString).substring(from: 1)
         }
         
-        //字符chuan截取
+        //
         var range = NSRange()
         range.location = 0
         range.length = 2
@@ -36,13 +38,13 @@ extension UIColor {
         range.location = 4
         let bString = (cString as NSString).substring(with: range)
         
-        //存储转换后的数值
+        //store the transformed value.
         var r:UInt32 = 0,g:UInt32 = 0,b:UInt32 = 0
-        //进行转换
+        //do the transform.
         Scanner(string: rString).scanHexInt32(&r)
         Scanner(string: gString).scanHexInt32(&g)
         Scanner(string: bString).scanHexInt32(&b)
-        //根据颜色值创建UIColor
+        //creat UIColor based on the color value.
         self.init(red: CGFloat(r)/255.0, green: CGFloat(g)/255.0, blue: CGFloat(b)/255.0, alpha: 1.0)
     }
 }
