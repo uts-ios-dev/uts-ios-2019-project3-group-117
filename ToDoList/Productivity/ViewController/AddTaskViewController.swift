@@ -83,7 +83,7 @@ class AddTaskViewController: UIViewController{
             granted, error in
             if (granted) && (error == nil) {
             
-                // 获取所有的事件（前后90天）
+                // import all the tasks.
                 let startDate = Date().addingTimeInterval(-3600*24*90)
                 let endDate = Date().addingTimeInterval(3600*24*90)
                 let predicate2 = eventStore.predicateForEvents(withStart: startDate,

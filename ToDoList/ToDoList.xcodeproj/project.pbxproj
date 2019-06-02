@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -83,23 +83,16 @@
 		2E0C3C962293C46B00A76384 /* ToDoList */ = {
 			isa = PBXGroup;
 			children = (
+				D9729DC022A26F64007847C1 /* Data */,
+				D9729DBF22A26648007847C1 /* Model */,
+				D9729DBE22A264C8007847C1 /* System */,
+				D9729DBD22A2648D007847C1 /* ViewController */,
 				2E0C3C972293C46B00A76384 /* AppDelegate.swift */,
-				2E0C3C992293C46B00A76384 /* TaskListViewController.swift */,
 				2E0C3C9B2293C46C00A76384 /* Main.storyboard */,
 				2E0C3CA12293C47200A76384 /* Assets.xcassets */,
 				2E0C3CA32293C47200A76384 /* LaunchScreen.storyboard */,
 				2E0C3CA62293C47200A76384 /* Info.plist */,
 				2E0C3C9E2293C46C00A76384 /* ToDoList.xcdatamodeld */,
-				2E0C3CAF2293D2CA00A76384 /* TaskDataService.swift */,
-				2E0C3CB12294D36E00A76384 /* WeekCell.swift */,
-				2E0C3CB32294F0E200A76384 /* DateCell.swift */,
-				2E0C3CB5229560EA00A76384 /* AddTaskTableViewController.swift */,
-				2E0C3CB7229571E400A76384 /* AddTaskViewController.swift */,
-				2EA267D32296B933008E5ACE /* UIColor+Hex.swift */,
-				2EA267D52296BDD3008E5ACE /* HaveTask.swift */,
-				2EA267D722977F3D008E5ACE /* TaskView.swift */,
-				2EA267D922979A0C008E5ACE /* TaskDetailViewController.swift */,
-				2EA267DB22990B3C008E5ACE /* LocalNotification.swift */,
 			);
 			path = ToDoList;
 			sourceTree = "<group>";
@@ -110,6 +103,45 @@
 				273018F14D2741677A3B4A87 /* Pods_ToDoList.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D9729DBD22A2648D007847C1 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2EA267D922979A0C008E5ACE /* TaskDetailViewController.swift */,
+				2E0C3CB7229571E400A76384 /* AddTaskViewController.swift */,
+				2E0C3CB5229560EA00A76384 /* AddTaskTableViewController.swift */,
+				2E0C3C992293C46B00A76384 /* TaskListViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		D9729DBE22A264C8007847C1 /* System */ = {
+			isa = PBXGroup;
+			children = (
+				2EA267D32296B933008E5ACE /* UIColor+Hex.swift */,
+				2EA267DB22990B3C008E5ACE /* LocalNotification.swift */,
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
+		D9729DBF22A26648007847C1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2EA267D52296BDD3008E5ACE /* HaveTask.swift */,
+				2EA267D722977F3D008E5ACE /* TaskView.swift */,
+				2E0C3CB12294D36E00A76384 /* WeekCell.swift */,
+				2E0C3CB32294F0E200A76384 /* DateCell.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D9729DC022A26F64007847C1 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				2E0C3CAF2293D2CA00A76384 /* TaskDataService.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		DD5E3E8A0A9C58E6EC064FC7 /* Pods */ = {
